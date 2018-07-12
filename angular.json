@@ -23,8 +23,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                ".",
+                "src/assets/sass"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -72,7 +80,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -123,5 +131,10 @@
       }
     }
   },
-  "defaultProject": "ngx-layouter"
+  "defaultProject": "ngx-layouter",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

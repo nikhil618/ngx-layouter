@@ -1,0 +1,32 @@
+<div class="m-3 p-3 box-border">
+  <h3>Form Generator - Configurator</h3>
+  <p class="description">
+    Please drag and drop the components from the list below to create your custom view of ngx-bootstrap components
+    <button class="btn btn-outline-primary pull-right" type="button">
+      <span class="fa fa-search"></span> Preview
+    </button>
+    <button class="btn btn-outline-primary pull-right mr-2" type="button">
+      <span class="fa fa-save"></span> Save Configuration
+    </button>
+  </p>
+  <div class="row builder">
+    <div class="col-md-3 col-xl-2 bd-sidebar">
+      <nav class="bd-links">
+        <div class="bd-toc-item">
+          <span [ngClass]="gridLayoutCollapse ? 'fa fa-plus-circle' : 'fa fa-minus-circle'" (click)="gridLayoutCollapse = !gridLayoutCollapse"></span>
+          <a href="javascript: void(0);" class="bd-toc-link pl-1" (click)="gridLayoutCollapse = !gridLayoutCollapse">Grid Layouts</a>
+          <ul class="nav bd-sidenav" [ngClass]="{'collapse': gridLayoutCollapse}">
+            <li>Component1</li>
+            <li>Component2</li>
+            <li>Component3</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-md-9 col-xl-10">
+      <div class="box-border demo">
+        <ng-template #mainContainer></ng-template>
+      </div>
+    </div>
+  </div>
+</div>
