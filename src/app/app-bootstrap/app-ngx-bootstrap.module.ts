@@ -10,12 +10,13 @@ import {
   PopoverModule,
   ProgressbarModule,
   RatingModule,
-  SortableModule,
   TabsModule,
   TimepickerModule,
   TooltipModule,
   TypeaheadModule
 } from 'ngx-bootstrap';
+
+import {SortableModule} from 'src/app/component-library/sortable/sortable.module';
 
 @NgModule({
   imports: [AccordionModule.forRoot(), AlertModule.forRoot(), BsDatepickerModule.forRoot(), ButtonsModule.forRoot(),

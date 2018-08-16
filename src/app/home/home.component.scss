@@ -7,10 +7,12 @@
   top: 4rem;
   height: 100%;
 }
+
 .bd-toc-item > .fa {
   color: rgba(0, 0, 0, 0.65);
   cursor: pointer;
 }
+
 .bd-toc-link {
   display: inline;
   padding: 0.25em 0;
@@ -43,6 +45,21 @@
   border: 1px solid $border-color;
 }
 
-.description > button{
+.description > button {
   margin-top: -0.5em;
+}
+
+.sortable-item {
+  padding: 6px 12px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.4em;
+  text-align: center;
+  cursor: grab;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+}
+
+.sortable-wrapper {
+  min-height: 150px;
 }

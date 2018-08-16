@@ -13,12 +13,21 @@
     <div class="col-md-3 col-xl-2 bd-sidebar">
       <nav class="bd-links">
         <div class="bd-toc-item">
-          <span [ngClass]="gridLayoutCollapse ? 'fa fa-plus-circle' : 'fa fa-minus-circle'" (click)="gridLayoutCollapse = !gridLayoutCollapse"></span>
-          <a href="javascript: void(0);" class="bd-toc-link pl-1" (click)="gridLayoutCollapse = !gridLayoutCollapse">Grid Layouts</a>
+          <span [ngClass]="gridLayoutCollapse ? 'fa fa-plus-circle' : 'fa fa-minus-circle'"
+                (click)="gridLayoutCollapse = !gridLayoutCollapse"></span>
+          <a href="javascript: void(0);" class="bd-toc-link pl-1" (click)="gridLayoutCollapse = !gridLayoutCollapse">Grid
+            Layouts</a>
           <ul class="nav bd-sidenav" [ngClass]="{'collapse': gridLayoutCollapse}">
-            <li>Component1</li>
-            <li>Component2</li>
-            <li>Component3</li>
+            <ngx-sortable style="width: 100%"
+                         [(ngModel)]="itemObjectsLeft"
+                         fieldName="renderType"
+                         itemClass="sortable-item"
+                         itemActiveClass="sortable-item-active"
+                         placeholderClass="sortable-item"
+                         wrapperClass="sortable-wrapper"
+                         [dropDisable]="true"
+                         [sortDisable]="true">
+            </ngx-sortable>
           </ul>
         </div>
       </nav>
